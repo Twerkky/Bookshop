@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NiceBook</title>
+    <link rel="stylesheet" href="basket.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
+    <script>
+        window.onscroll = function() {
+            if (window.pageYOffset > 0) {
+                document.querySelector('.navbar').classList.add('fixed');
+            } else {
+                document.querySelector('.navbar').classList.remove('fixed');
+            }
+        };
+  
+
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Yourbook</h1>
+        <button class="nav-toggle" aria-label="toggle navigation">Menu</button>
+        <input class="search-in" type="search" id="search-box" onkeyup="searchWords()" placeholder="Search titles, authors, and ISBNs">
+        <div class="navLink">
+            <a href="gift.html">Gift Cards</a>
+            <a href="category.html">Category</a>
+            <a href="top15.html">Top 15</a>
+            <a href="index.html">Account</a>
+            <a href="basket.html">Basket</a>
+        </div>
+    </nav>
+    <main class="mainbar">
+        <div class="slider-container">
+            <div id="slider-left" class="slider">
+                <img src="/bookshop/photo/2.jpg" class="slide active">
+                <img src="/bookshop/photo/1.jpg" class="slide">
+            </div>
+            <div class="basket">
+                <h1>Shopping Basket</h1>
+                <table class="desktop">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Qty</th>
+                            <th>Price</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="bookPhoto">
+                                <img src="photo/12.jpg" alt="" srcset="">
+                                <div>
+                                    <h3>Title</h3>
+                                    <h4>Author</h4>
+                                </div>
+                                
+                            </td>
+                            <td><input type="number" class="line_item" min="0" value="1" name="order" id="order_line" style="width: 50px; padding: 5px;"></td>
+                            <td>£3.00</td>
+                            <td><button class="delete-btn">Delete</button></td>
+                        </tr>
+                        <!-- Additional rows as needed -->
+                    </tbody>
+                </table>
+                <table class="mobile">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                                <td class="bookPhoto">
+                                    <img src="photo/12.jpg" alt="" srcset="">
+                                    <div>
+                                        <h3>Title</h3>
+                                        <h4>Author</h4>
+                                    </div>
+                                    
+                                </td>
+                            <th>Qty</th>
+                            <td><input type="number" class="line_item" min="0" value="1" name="order" id="order_line" style="width: 50px; padding: 5px;"></td>
+                           
+                            <th>Price</th>
+                            <td>£3.00</td>
+                            <th>Action</th>
+                            <td><button class="delete-btn">Delete</button></td>
+                       
+                        </tr>
+                    </thead>
+                    
+                </table>
+                <button type="button" class="checkout-btn">CHECKOUT</button>
+            </div>
+            
+                
+           
+            <div id="slider-right" class="slider">
+                <img src="/bookshop/photo/1.jpg" class="slide active">
+                <img src="/bookshop/photo/2.jpg" class="slide">
+            </div>
+        </div>
+    </main>
+    <footer class="footbar">
+        
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3>Yourbook <span>Bookshop</span></h3>
+                    
+                    <div class="contact">
+                        <span><i class="fab fa-telegram"></i>&nbsp;+123 456 7890</span>
+                        <span><i class=""></i>&nbsp;info@yourbookshop.com</span>
+                    </div>
+                    <div class="socials">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Stay updated with the latest books and offers</p>
+                    <div class="form-element">
+                        <input type="text" placeholder="Email">
+                        <span><button type="submit">Subscribe</button></span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; yourbookshop.com | Designed by Yourbook Team
+            </div>
+        
+        
+    </footer>
+    <script src="index.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

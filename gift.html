@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NiceBook</title>
+    <link rel="stylesheet" href="gift.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
+    <script>
+        window.onscroll = function() {
+            if (window.pageYOffset > 0) {
+                document.querySelector('.navbar').classList.add('fixed');
+            } else {
+                document.querySelector('.navbar').classList.remove('fixed');
+            }
+        };
+        window.addEventListener('scroll', handleScroll);
+        
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Yourbook</h1>
+        <button class="nav-toggle" aria-label="toggle navigation">Menu</button>
+        <input class="search-in" type="search" id="search-box" onkeyup="searchWords()" placeholder="Search titles, authors, and ISBNs">
+        <div class="navLink">
+            <a href="gift.html">Gift Cards</a>
+            <a href="category.html">Category</a>
+            <a href="top15.html">Top 15</a>
+            <a href="index.html">Account</a>
+            <a href="basket.html">Basket</a>
+        </div>
+    </nav>
+    <main class="mainbar">
+       <h1>Yourbook Gift Cards: The Gift of Choice</h1>
+       <div class="mainContent">
+            <div class="mainDescription">
+                <h2>Unlock a world of adventure, mystery, romance, and knowledge with a Yourbook Gift Card!</h2>
+                <img class="DesPhoto" src="photo/giftcard.webp" alt="photo">
+                <p>Whether you're looking to treat yourself or find the perfect gift for a book lover in your life, our gift cards provide a hassle-free way to celebrate every occasion. With a Yourbook Gift Card, the recipient gets immediate access to a vast selection of books across multiple genres—from latest bestsellers and thrilling mysteries to scholarly texts and heartwarming children’s stories.</p>
+                <h2>Why Choose a Yourbook Gift Card?</h2>
+                <ul>
+                    <li><strong>Flexibility:</strong> No more guessing! Yourbook Gift Cards can be used to purchase any book or series, allowing your loved ones to choose exactly what they want.</li>
+                    <li>Convenience: Delivered instantly via email or traditionally through beautifully packaged physical cards, our gift cards make for a thoughtful and convenient present.</li>
+                    <li>Customizable: Choose from various beautiful designs to personalize your gift card for birthdays, anniversaries, holidays, or any special occasion. Add a personal message to show your affection.</li>
+                    <li>No Expiry: Take your time! All Yourbook Gift Cards come with no expiration date, offering the ultimate convenience and flexibility.</li>
+                    <li>Promotions and Discounts: Special occasions call for special treats! Benefit from exclusive discounts and promotional offers only available to gift card holders.</li>
+                </ul>
+                <h2>How to Buy and Redeem Yourbook Gift Cards:</h2>
+                <ol>
+                    <li><strong>Purchase Online:</strong> Select the gift card with your desired amount and design from our Gift Cards page. Choose to send it directly to the recipient's email or to your own if you prefer handing it over personally.</li>
+                    <li><strong>Personalize Your Gift:</strong> Customize your gift card with a personal message and choose the delivery date for email gift cards.</li>
+                    <li><strong>Easy Redemption:</strong> Easy Redemption: Gift cards can be easily redeemed online at checkout. Just enter the gift card number—no additional fees or complicated processes.</li>
+                </ol>
+                <p>Give the gift that keeps on giving. Let your friends and loved ones discover their next favorite book and embark on new literary adventures with Yourbook Gift Cards today!</p>
+            </div>
+            <div class="MainForm">
+                <label for="toEmail">To:</label>
+                <input type="email" id="toEmail" placeholder="Recipient's email">
+            
+                <label for="fromEmail">From:</label>
+                <input type="email" id="fromEmail" placeholder="Your email">
+            
+                <label>Choose an amount</label>
+                <div class="radioList">
+                    <div class="radio-button">
+                        <input type="radio" id="amount5" name="amount" value="5" required>
+                        <label for="amount5">£5</label>
+                    </div>
+                    <div class="radio-button">
+                        <input type="radio" id="amount10" name="amount" value="10" required>
+                        <label for="amount10">£10</label>
+                    </div>
+                    <div class="radio-button">
+                        <input type="radio" id="amount15" name="amount" value="15" required>
+                        <label for="amount15">£15</label>
+                    </div>
+                    <div class="radio-button">
+                        <input type="radio" id="amount25" name="amount" value="25" required>
+                        <label for="amount25">£25</label>
+                    </div>
+                    <div class="radio-button">
+                        <input type="radio" id="amount50" name="amount" value="50" required>
+                        <label for="amount50">£50</label>
+                    </div>
+                    <div class="radio-button">
+                        <input type="radio" id="amount100" name="amount" value="100" required>
+                        <label for="amount100">£100</label>
+                    </div>
+                </div>
+            
+                <label for="message">Add message</label>
+                <input type="text" id="message" name="message">
+            
+                <label for="sendDate">Choose date</label>
+                <input type="date" id="sendDate" name="sendDate">
+            
+                <button>Add to basket</button>
+
+            
+                <div class="gift-card-redemption">
+                    <h2>Already Have a Gift Card?</h2>
+                    <p>Redeem your code here:</p>
+                    <form action="/submit-your-code" method="post">
+                        <div class="form-group">
+                            <label for="giftCardCode">Enter Your code</label>
+                            <input type="text" id="giftCardCode" placeholder="Code #" required>
+                            <button type="submit">REDEEM</button>
+                        </div>
+                        <p class="info-text">This amount will be added to your store credit.</p>
+                    </form>
+                </div>
+            </div>
+            
+       </div>
+       
+    </main>
+    <footer class="footbar">
+        
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h3>Yourbook <span>Bookshop</span></h3>
+                    
+                    <div class="contact">
+                        <span><i class="fab fa-telegram"></i>&nbsp;+123 456 7890</span>
+                        <span><i class=""></i>&nbsp;info@yourbookshop.com</span>
+                    </div>
+                    <div class="socials">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Stay updated with the latest books and offers</p>
+                    <div class="form-element">
+                        <input type="text" placeholder="Email">
+                        <span><button type="submit">Subscribe</button></span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; yourbookshop.com | Designed by Yourbook Team
+            </div>
+        
+        
+    </footer>
+    <script src="index.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
